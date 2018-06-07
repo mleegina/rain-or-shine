@@ -1,0 +1,177 @@
+/*------------------------------------*\
+ * - 1. Global base settings
+ * - 2. Object wrappers
+ * - 3. Text helpers
+ * - 4. Keyframe animations
+
+
+  1. BASE-SETTINGS
+\*------------------------------------*/
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url("img/weather.png");
+  font-family: "Raleway", sans-serif;
+}
+
+h1 {
+  font-family: "Shadows Into Light", cursive; 
+}
+
+/*------------------------------------*\
+  2. OBJECT WRAPPERS
+\*------------------------------------*/
+
+.container {
+  outline: 1px solid lightblue;
+  outline-offset: -1em;
+  padding: 3em;
+}
+
+#additional-info {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.card {
+  max-width: 300px;
+}
+
+.load {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+  background: white;
+  outline: 1px solid lightblue;
+  outline-offset: -15px;
+}
+
+/*------------------------------------*\
+  3. TEXT HELPERS
+\*------------------------------------*/
+
+.heading {
+  padding: 15px;
+  text-align: center;
+}
+
+.heading h1 {
+  font-size: 40px;
+}
+
+.first {
+  margin: 0 auto;
+  float: none;
+  margin-bottom: 10px;
+}
+
+.currloc {
+  display: inline-block;
+  margin: auto;
+  width: 40%;
+}
+
+.weather-icon {
+  height: 150px;
+  width: 150px;
+  margin: auto;
+  display: block;
+}
+
+#forecast {
+  margin: auto;
+  width: 40%;
+  text-align: center;
+  padding-bottom: 15px;
+}
+
+#forecast li {
+  list-style-type: none;
+}
+
+.location {
+  text-align: center;
+}
+
+.load h1 {
+  position: relative;
+  top: 20%;
+  text-align: center;
+  color: steelblue;
+}
+
+#spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 2em;
+  height: 2em;
+  border-radius: 50%;
+  background: transparent;
+  -webkit-animation: loader 2s 1s infinite linear;
+  animation: loader 2s 1s infinite linear;
+
+  /*   outline for firefox compatibility */
+  outline: 1px solid transparent;
+  box-shadow: 45px 0px 0 powderblue, 0px 45px 0 powderblue,
+    -45px 0px 0 powderblue, 0px -45px 0 powderblue;
+}
+
+/*------------------------------------*\
+  4. KEYFRAMES
+\*------------------------------------*/
+
+@keyframes loader {
+  0%,
+  100% {
+    box-shadow: 0px 0px 0 powderblue, 0px 0px 0 powderblue, 0px 0px 0 powderblue,
+      0px 0px 0 powderblue, 0px 0px 0 steelblue, 0px 0px 0 steelblue,
+      0px 0px 0 steelblue, 0px 0px 0 steelblue;
+  }
+  20% {
+    box-shadow: 30px 30px 0 powderblue, -30px 30px 0 powderblue,
+      -30px -30px 0 powderblue, 30px -30px 0 powderblue, 45px 0px 0 steelblue,
+      0px 45px 0 steelblue, -45px 0px 0 steelblue, 0px -45px 0 steelblue;
+  }
+  50% {
+    transform: rotate(360deg);
+    box-shadow: 30px 30px 0 powderblue, -30px 30px 0 powderblue,
+      -30px -30px 0 powderblue, 30px -30px 0 powderblue, 55px 55px 0 steelblue,
+      -55px 55px 0 steelblue, -55px -55px 0 steelblue, 55px -55px 0 steelblue;
+  }
+  80% {
+    box-shadow: 30px 30px 0 powderblue, -30px 30px 0 powderblue,
+      -30px -30px 0 powderblue, 30px -30px 0 powderblue, 45px 0px 0 steelblue,
+      0px 45px 0 steelblue, -45px 0px 0 steelblue, 0px -45px 0 steelblue;
+  }
+}
+
+@-webkit-keyframes loader {
+  0%,
+  100% {
+    box-shadow: 0px 0px 0 powderblue, 0px 0px 0 powderblue, 0px 0px 0 powderblue,
+      0px 0px 0 powderblue, 0px 0px 0 steelblue, 0px 0px 0 steelblue,
+      0px 0px 0 steelblue, 0px 0px 0 steelblue;
+  }
+  20% {
+    box-shadow: 30px 30px 0 powderblue, -30px 30px 0 powderblue,
+      -30px -30px 0 powderblue, 30px -30px 0 powderblue, 45px 0px 0 steelblue,
+      0px 45px 0 steelblue, -45px 0px 0 steelblue, 0px -45px 0 steelblue;
+  }
+  50% {
+    transform: rotate(360deg);
+    box-shadow: 30px 30px 0 powderblue, -30px 30px 0 powderblue,
+      -30px -30px 0 powderblue, 30px -30px 0 powderblue, 55px 55px 0 steelblue,
+      -55px 55px 0 steelblue, -55px -55px 0 steelblue, 55px -55px 0 steelblue;
+  }
+  80% {
+    box-shadow: 30px 30px 0 powderblue, -30px 30px 0 powderblue,
+      -30px -30px 0 powderblue, 30px -30px 0 powderblue, 45px 0px 0 steelblue,
+      0px 45px 0 steelblue, -45px 0px 0 steelblue, 0px -45px 0 steelblue;
+  }
+}
