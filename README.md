@@ -1,6 +1,6 @@
 # Rain or Shine
 
-A weather app that displays the forecast based off of your geolocation. A CSS3 loader is displayed while the AJAX calls are being made.
+A weather app that displays the forecast based off of your geolocation. A CSS3 loader is displayed while the AJAX calls to the Mapquest and Dark Sky APIs are being made.
 
 # Screenshots
 
